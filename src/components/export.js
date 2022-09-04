@@ -1,7 +1,7 @@
 import Navbar from './Navbar'
-import CoinTable from './CoinTable'
+import CoinTable from './Table/CoinTable'
 import Footer from './Footer'
-import Hero from './Hero'
+import Hero from './Hero/Hero'
 
 export {
     Hero,

@@ -11,7 +11,7 @@ export default function App() {
 
   return (
     <div className={DarkTheme ? 'dark' : ''}>
-      <div className='bg-white p-4 text-black font-bold dark:bg-gray-700 dark:text-white w-full h-full'>
+      <div className='bg-white scroll-smooth p-4 text-black font-bold dark:bg-gray-700 dark:text-white w-full min-h-full'>
         <nav><Navbar setDarkTheme={()=>setDarkTheme(!DarkTheme)}  /></nav>
         <div className='flex flex-col p-2 mt-9 bg-gray-100 dark:bg-gray-700'>
           <Hero/>

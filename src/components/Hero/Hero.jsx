@@ -1,5 +1,5 @@
 import React , {useEffect,useState} from 'react'
-import getData from '../data/fetchData'
+import getData from '../../data/fetchData'
 import HeroCoinData from './HeroCoinData'
 
 
