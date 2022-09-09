@@ -28,7 +28,7 @@ export default function Hero() {
   //console.log(renderCoins)
 
   return (
-    <div className="carousel rounded-box min-w-full min-h-full mt-5 border dark:bg-gray-800 ">
+    <div className="carousel rounded-box min-w-full min-h-full mt-5 border dark:bg-gray-800">
       {renderCoins}
     </div>
   )

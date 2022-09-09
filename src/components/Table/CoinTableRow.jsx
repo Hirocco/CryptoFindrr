@@ -1,11 +1,12 @@
 import React from 'react'
 import millify from 'millify'
 import { Sparklines, SparklinesLine } from 'react-sparklines';
+import Modal from './Modal/Modal';
 
 export default function CoinTableRow({coinName,coinPrice,coinPriceLowest,coinPriceHighest,coinPriceChange,coinPriceChangePercantage,volume,sparkLine}) {
   const textStyle='flex font-bold text-xl'
   return (
-    <tr className="bg-gray-200 border-b dark:bg-gray-900 dark:border-gray-700">
+    <tr onClick={()=>setOpenModal((prevModal)=>!prevModal)} className="bg-gray-200 border-b dark:bg-gray-900 dark:border-gray-700">
         <th scope="row" className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
           <p className={textStyle}>{coinName}</p>
         </th>
@@ -33,6 +34,12 @@ export default function CoinTableRow({coinName,coinPrice,coinPriceLowest,coinPri
               <SparklinesLine color="#14B8A6" />
             </Sparklines>
           </div>
+        </td>
+        <td className='p-0'>
+          <Modal 
+          coinName={coinName}
+          sparkLine={sparkLine}
+          />
         </td>
       </tr>
   )

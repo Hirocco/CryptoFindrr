@@ -58,39 +58,44 @@ export default function CoinTable({searchInput}) {
     ))
     /*FINISH OF SEARCHING */
 
+    const thStyle = 'py-3 px-6 border-b'
+
   return (
-  <div className="overflow-x-auto relative shadow-md sm:rounded-lg mt-3 ">
+  <div className="overflow-x-auto relative shadow-md sm:rounded-lg mt-3 border">
       <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <thead className="text-xs text-gray-700 uppercase bg-gray-300 dark:bg-gray-700 dark:text-gray-400">
               <tr>
-                  <th scope="col" className="py-3 px-6">
+                  <th scope="col" className={thStyle}>
                       Coin name
                   </th>
-                  <th scope="col" className="py-3 px-6">
+                  <th scope="col" className={thStyle}>
                       Current Price
                   </th>
-                  <th scope="col" className="py-3 px-6">
+                  <th scope="col" className={thStyle}>
                       Lowest - 24h
                   </th>
-                  <th scope="col" className="py-3 px-6">
+                  <th scope="col" className={thStyle}>
                       Highest - 24h
                   </th>
-                  <th scope="col" className="py-3 px-6">
+                  <th scope="col" className={thStyle}>
                       Price change
                   </th>
-                  <th scope="col" className="py-3 px-6">
+                  <th scope="col" className={thStyle}>
                       Price change - percentage
                   </th>
-                  <th scope="col" className="py-3 px-6">
+                  <th scope="col" className={thStyle}>
                       Volume
                   </th>
-                  <th scope="col" className="py-3 px-6">
+                  <th scope="col" className={thStyle}>
                       Last 7 days
+                  </th>
+                  <th scope="col" className={thStyle}>
+                    More...
                   </th>
               </tr>
           </thead>
           <tbody>
-              {Loading ? <ReactLoading  className='ml-[700px]' type={'bars'} color={'black'} height={667} width={375} /> : renderRows}
+              {Loading ? <ReactLoading  className='ml-[700px] mt-[150px]' type={'bars'} color={'black'} height={667} width={375} /> : renderRows}
           </tbody>
       </table>
       <div className="flex flex-col items-center mb-8 px-4 mx-auto mt-8">
