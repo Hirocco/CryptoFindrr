@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.carousel-p {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    padding-bottom: 1px;
+}
+.carousel-p::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+/* Track */
+.carousel-p::-webkit-scrollbar-track {
+    background: inherit;
+    border-radius: 100%;
+}
+  /* Handle */
+.carousel-p::-webkit-scrollbar-thumb {
+    background-color: rgb(171, 171, 171);
+    border-radius: 1rem;
+  }
+  
+  /* Handle on hover */
+.carousel-p::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

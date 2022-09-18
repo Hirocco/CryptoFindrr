@@ -1,0 +1,4 @@
+Fake trading - when someone signs up he gets 10k of fake money to buy/sell coins and train on the site
+Create/Remove/Update/Delete - list of things next to cryptonews for user to write down (take some notes or something)
+zaokraglanie cen do 3 miejsc po przecinku 
+Podlaczenie sie do tradingview api 

@@ -89,6 +89,9 @@ export default function CoinTable({searchInput}) {
                   <th scope="col" className={thStyle}>
                       Last 7 days
                   </th>
+                  {/*<th scope="col" className={thStyle}>
+                    Buy
+  </th>*/}
               </tr>
           </thead>
           <tbody>

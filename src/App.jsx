@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import {Navbar,Hero,CoinTable,Footer,InfoPart} from './components/export'
 
+
 export default function App() {
   const [DarkTheme , setDarkTheme] = useState(false)
   const [searchInput,setSearchInput] = useState('')
@@ -9,10 +10,12 @@ export default function App() {
     setSearchInput(value)
   }
 
+  let cash=10000
+
   return (
     <div className={DarkTheme ? 'dark' : ''}>
       <div className='bg-white scroll-smooth p-0 py-4 text-black font-bold dark:bg-gray-700 dark:text-white w-full min-h-full '>
-        <nav><Navbar setDarkTheme={()=>setDarkTheme(!DarkTheme)} /></nav>
+        <nav><Navbar setDarkTheme={()=>setDarkTheme(!DarkTheme)} cash={cash} /></nav>
         <div className='flex flex-col p-2 px-5 mt-9 bg-gray-100 dark:bg-gray-700'>
           <Hero/>
           <InfoPart/>

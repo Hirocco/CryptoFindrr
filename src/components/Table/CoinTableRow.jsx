@@ -1,11 +1,17 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import millify from 'millify'
 import { Sparklines, SparklinesLine } from 'react-sparklines';
-export default function CoinTableRow({coinName,coinPrice,coinPriceLowest,coinPriceHighest,coinPriceChange,coinPriceChangePercantage,volume,sparkLine}) {
+
+export default function CoinTableRow({coinName,coinPrice,coinPriceLowest,
+coinPriceHighest,coinPriceChange,coinPriceChangePercantage,volume,sparkLine}) {
+
   const textStyle='flex font-bold text-xl'
+  //const price = useRef()
+
+
   return (
     <tr onClick={()=>setOpenModal((prevModal)=>!prevModal)} className="bg-gray-200 border-b dark:bg-gray-900 dark:border-gray-700 ">
-        <th scope="row" className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+        <th scope="row" className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white ">
           <p className={textStyle}>{coinName}</p>
         </th>
         <td className="py-4 px-6">
@@ -33,7 +39,12 @@ export default function CoinTableRow({coinName,coinPrice,coinPriceLowest,coinPri
             </Sparklines>
           </div>
         </td>
-
+        {/*<td>
+          <div className='flex max-w-[150px]'>
+            <input type="text" placeholder="Amount" className="input input-sm max-w-[50%] m-auto rounded-none outline-none" />
+            <button className='btn ghost btn-sm m-auto rounded-none'>Buy</button>
+          </div>
+  </td>*/}
       </tr>
   )
 }

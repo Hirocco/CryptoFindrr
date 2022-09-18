@@ -21,7 +21,7 @@ export default function Modal({Info}) {
       }
 
     const renderInfo = informations.map(news=>(
-        <div className='flex flex-col dark:shadow shadow-xl border-1 p-3  dark:bg-gray-200 rounded-box mt-4'>
+        <div className='flex flex-col dark:shadow shadow-xl border-1 p-3  dark:bg-gray-200 rounded-box mt-10'>
             <h3 className="text-lg font-bold text-black m-auto">{news.title}</h3>
             <a target='_blank' href={news.url} className="link link-hover text-black m-auto mt-3">{news.url}</a>
         </div>
@@ -33,7 +33,7 @@ export default function Modal({Info}) {
         <label htmlFor="my-modal-4" className="btn glass modal-button">CryptoNews</label>
         <input type="checkbox" id="my-modal-4" className="modal-toggle" />
         <label htmlFor="my-modal-4" className="modal cursor-pointer">
-          <label className="modal-box relative dark:bg-gray-700 rounded-box overflow-auto " for="">
+          <label className="modal-box relative dark:bg-gray-700 rounded-box overflow-auto " htmlFor="">
           <input type="text" onChange={(e)=>handleSearch(e.target.value)} placeholder="Search info" className="input input-ghost m-auto mt-2 w-full max-w-[800px] border-black dark:border-white border dark:placeholder-white  dark:focus:placeholder-black" />
             {renderInfo}
           </label>
